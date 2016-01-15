@@ -6,17 +6,18 @@ import psycopg2 as pg
 from collections import namedtuple
 from sqlalchemy import create_engine
 
-def get_connections(path):
+def get_connections(path, db_name):
     # Shouts out to Josh Patchus for this connection code.
     with open(path, 'r') as f:
         yml = yaml.load(f)
 
-        conn_str = 'postgresql://{}:{}@{}:{}/cavagrill'
+        conn_str = 'postgresql://{}:{}@{}:{}/{}'
 
         db = conn_str.format(yml['to_user'],
                              yml['to_pass'],
                              yml['to_server'],
-                             str(yml['yml']))
+                             str(yml['to_port']),
+                             db_name)
 
     return create_engine(db)
 

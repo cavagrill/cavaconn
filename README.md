@@ -13,8 +13,10 @@ a server_info.yml and a twitter_info.yml file should be placed in a directory
 ```python
 import cavaconn as cc
 
+# creates a SQLAlchemy engine object tied to our postgresql db
 eng = cc.get_connections('server_info.yml')
 
+# creates a named_tuple object of twitter auth keys that can be accessed like api_keys.access_token
 api_keys = cc.connect_twitter('twitter_info.yml')
 ```
 
