@@ -21,6 +21,10 @@ conn = cc.get_conection('server_info.yml', db_name)
 
 # creates a named_tuple object of twitter auth keys that can be accessed like api_keys.access_token
 api_keys = cc.connect_twitter('twitter_info.yml')
+
+# Executes a SQL Query on an existing PostgreSQL connection
+q = """DROP TABLE IF EXISTS throwaway;"""
+cc.pg_commit(conn, q)
 ```
 
 ## Example Yaml
