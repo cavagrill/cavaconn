@@ -43,3 +43,9 @@ def connect_twitter(path):
                        consumer_secret=yml['consumer_secret'])
 
         return keys
+
+def pg_commit(conn, q):
+    cursor = conn.cursor()
+    cursor.execute(q)
+    conn.commit()
+    return cursor
