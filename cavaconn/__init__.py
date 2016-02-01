@@ -24,11 +24,11 @@ def get_engine(path, db_name):
 def get_connection(path, db_name):
     with open(path, 'r') as f:
         yml = yaml.load(f)
-        conn_pg  = pg.connect(host = codes['to_server'],
-                              port = codes['to_port'],
+        conn_pg  = pg.connect(host = yml['to_server'],
+                              port = str(yml['to_port']),
                               database = db_name,
-                              user = codes['to_user'],
-                              password = codes['to_pass'])
+                              user = yml['to_user'],
+                              password = yml['to_pass'])
 
     return conn_pg
 
