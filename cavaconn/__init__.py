@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import yaml
+import pymssql
 
 import psycopg2 as pg
 
@@ -25,7 +26,7 @@ def get_connection(path, db_name):
     with open(path, 'r') as f:
         yml = yaml.load(f)
         conn_pg  = pg.connect(host = yml['to_server'],
-                              port = str(yml['to_port']),
+                              port = yml['to_port'],
                               database = db_name,
                               user = yml['to_user'],
                               password = yml['to_pass'])
@@ -49,3 +50,12 @@ def pg_commit(conn, q):
     cursor.execute(q)
     conn.commit()
     return cursor
+
+def get_MSSQL(path, db_name):
+    with open(path, 'r') as f:
+        yml = yaml.load(f)
+
+        return pymssql.connect(str(yml['from_server']),
+                           str(yml['from_user']),
+                           str(yml['from_password']),
+                           str(yml['from_database']), charset='utf8')
