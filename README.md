@@ -17,7 +17,7 @@ import cavaconn as cc
 eng = cc.get_engine('server_info.yml', db_name)
 
 # creates a PostgreSQL connection
-conn = cc.get_conection('server_info.yml', db_name)
+conn = cc.get_connection('server_info.yml', db_name)
 
 # creates a named_tuple object of twitter auth keys that can be accessed like api_keys.access_token
 api_keys = cc.connect_twitter('twitter_info.yml')
