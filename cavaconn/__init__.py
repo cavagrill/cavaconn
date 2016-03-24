@@ -22,6 +22,13 @@ def get_engine(path, db_name):
 
     return create_engine(db)
 
+def get_connstr(path, db_name):
+  return 'postgresql://{}:{}@{}:{}/{}'.format(yml['to_user'],
+                                              yml['to_pass'],
+                                              yml['to_server'],
+                                              str(yml['to_port']),
+                                              db_name)
+
 def get_connection(path, db_name):
     with open(path, 'r') as f:
         yml = yaml.load(f)
