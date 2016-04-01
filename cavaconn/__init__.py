@@ -72,3 +72,4 @@ def get_MSSQL(path, db_name):
                            str(yml['from_user']),
                            str(yml['from_password']),
                            str(yml['from_database']), charset='utf8')
+
