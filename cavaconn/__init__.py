@@ -71,5 +71,5 @@ def get_MSSQL(path, db_name):
         return pymssql.connect(str(yml['from_server']),
                            str(yml['from_user']),
                            str(yml['from_password']),
-                           str(yml['from_database']), charset='utf8')
+                           db_name), charset='utf8')
 
