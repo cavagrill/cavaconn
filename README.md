@@ -1,6 +1,6 @@
 # cavaconn
 With cavaconn you can connect to servers and create SQLAlchemy Engines, PsychoPG connections, and connect to twitter APIs.
-This is intended to be a series of Helper methods, not a full functioning package, hence why we are not currently offering it on
+This is intended to be a series of helper methods, not a full functioning package, hence why we are not currently offering it on
 pip.
 
 ## Installation
