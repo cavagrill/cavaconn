@@ -1,0 +1,8 @@
+setup.py
+cavaconn/__init__.py
+cavaconn.egg-info/PKG-INFO
+cavaconn.egg-info/SOURCES.txt
+cavaconn.egg-info/dependency_links.txt
+cavaconn.egg-info/not-zip-safe
+cavaconn.egg-info/requires.txt
+cavaconn.egg-info/top_level.txt
