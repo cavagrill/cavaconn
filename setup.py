@@ -9,5 +9,5 @@ setup(name='cavaconn',
       author_email='jordan.bramble@cavagrill.com',
       license='MIT',
       packages=['cavaconn'],
-      install_requires=['psycopg2', 'PyYAML', 'sqlalchemy'],
+      install_requires=['psycopg2', 'PyYAML', 'sqlalchemy', 'pymssql'],
       zip_safe=False)
