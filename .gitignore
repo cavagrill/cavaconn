@@ -1,0 +1,4 @@
+*.pyc
+build/
+dist/
+cavaconn.egg-info/
