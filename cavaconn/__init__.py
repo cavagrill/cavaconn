@@ -73,3 +73,15 @@ def get_MSSQL(path, db_name):
                            str(yml['from_password']),
                            db_name, charset='utf8')
 
+def get_engine_mssql(path, db_name):
+    with open(path, 'r') as f:
+        yml = yaml.load(f)
+
+        conn_str = 'mssql+pymssql://{}:{}@{}:1433/{}'
+
+        db = conn_str.format(yml['from_user'],
+                             yml['from_password'],
+                             yml['from_server'],
+                             db_name)
+
+    return create_engine(db)
