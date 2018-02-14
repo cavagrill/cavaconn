@@ -1,10 +1,10 @@
 from setuptools import setup
 
 setup(name='cavaconn',
-      version='0.1',
+      version='0.2',
       description='Create database engines for SQL servers, and easily connect to APIs',
       url='https://github.com/cavagrill/cavaconn',
-      download_url='https://github.com/cavagrill/cavaconn/tarball/0.1',
+      download_url='https://github.com/cavagrill/cavaconn/tarball/0.2',
       author='Jordan Bramble',
       author_email='tech@cava.com',
       license='MIT',
