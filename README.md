@@ -5,9 +5,10 @@ pip.
 
 ## Installation
 
-`$ git clone https://github.com/cavagrill/cava_connect.git && cd cava_connect`
-
-`$ python setup.py install`
+```
+$ git clone https://github.com/cavagrill/cava_connect.git && cd cava_connect
+$ python setup.py install
+```
 
 ## Usage
 a server_info.yml and a twitter_info.yml file should be placed in a directory
