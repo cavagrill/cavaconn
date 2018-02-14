@@ -1,13 +1,19 @@
 # cavaconn
 With cavaconn you can connect to servers and create SQLAlchemy Engines, PsychoPG connections, and connect to twitter APIs.
-This is intended to be a series of helper methods, not a full functioning package, hence why we are not currently offering it on
-pip.
+This is intended to be a series of helper methods, not a full functioning package.
 
 ## Installation
 
-`$ git clone https://github.com/cavagrill/cava_connect.git && cd cava_connect`
+```
+$ git clone https://github.com/cavagrill/cava_connect.git && cd cava_connect
+$ python setup.py install
+```
 
-`$ python setup.py install`
+or
+
+```
+$ pip install cavaconn
+```
 
 ## Usage
 a server_info.yml and a twitter_info.yml file should be placed in a directory
@@ -35,7 +41,7 @@ eng = cc.get_MSSQL('server_info.yml', db_name)
 conn_str = cc.get_connst('server_info.yml', dbname)
 ```
 
-## Example Twitter Yaml
+## Example Twitter YAML
 
 ```yaml
 ---
@@ -45,7 +51,7 @@ conn_str = cc.get_connst('server_info.yml', dbname)
   consumer_secret: 'b'
 ```
 
-## Example Connection Yaml
+## Example Connection YAML
 
 ```yaml
 ---
